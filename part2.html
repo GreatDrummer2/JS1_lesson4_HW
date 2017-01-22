@@ -8,15 +8,40 @@
       str = str.toUpperCase(); // все переводим в верхний регистр
       var n = str.length, counter = 0, i = 0;
       while(i < n) {
-        if(str.charAt(i) == "B"){  // в условии проверяем если данный символ является "В"
+        if(str.charAt(i) == "B"){  // в условии проверяем если данный по очереди символ является "В"
           counter++;
         }
         i++;
       }
       alert(counter);
     }
-    str = prompt("Введите текст на латинице,чтобы мы посчитали сколько там символов \"B\": ");
+
+    //или
+    function countBs1(str){
+      countChar(str,"b");
+    }
+
+    function countChar(str,s){
+      s = s.toUpperCase();
+      str = str.toUpperCase(); // все переводим в верхний регистр
+      var n = str.length, counter = 0, i = 0;
+      while(i < n) {
+        if(str.charAt(i) == s){ //  условии проверяем если данный по очереди символ равен тому символу,который мы ищем
+          counter++;
+        }
+        i++;
+      }
+      alert(counter);
+    }
+    var str = prompt("Введите текст на латинице,чтобы мы посчитали сколько там символов \"B\": ");
     countBs(str);
+    countBs1(str);
+    var str2 = prompt("Выберите символ,который вам хочеться найти: ");
+    while(str2.length > 1){
+      str2 = prompt("Выберите  1 символ,который вам хочеться найти: ");
+    }
+    var str1 = prompt("Введите текст,чтобы мы посчитали сколько там символов: ");
+    countChar(str1,str2);
   </script>
 </head>
 <body>
