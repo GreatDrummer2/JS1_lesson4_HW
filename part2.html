@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <script type="text/javascript">
+     function countBs(str){
+      str = str.toUpperCase(); // се переводим в верхний регистр
+      var n = str.length, counter = 0, i = 0;
+      while(i < n) {
+        if(str.charAt(i) == "B"){  // в условии проверяем если данный символ является "В"
+          counter++;
+        }
+        i++;
+      }
+      alert(counter);
+    }
+    str = prompt("Введите текст на латинице,чтобы мы посчитали сколько там символов \"B\": ");
+    countBs(str);
+  </script>
+</head>
+<body>
+
+</body>
+</html>
